@@ -28,6 +28,8 @@ class PlayState extends FlxState
 	{
 		super.create();
 		FlxG.camera.bgColor = 0xff1B1E2B;
+		FlxG.mouse.visible = !FlxG.onMobile;
+		FlxG.autoPause = true;
 		FlxG.sound.playMusic('assets/music/music$SOUND_EXT', 0.8);
 		circle = new FlxSprite().makeGraphic(320, 320, flixel.util.FlxColor.TRANSPARENT);
 		circle.drawCircle(-1, -1, -1, 0xffffdd1e);
